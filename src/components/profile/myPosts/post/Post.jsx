@@ -2,15 +2,23 @@ import React from "react";
 import s from "./Post.module.css";
 import image from "../../../../assets/images/ava-1.jfif"
 
-const Post = () => {
+const Post = (props) => {
     return (
         <div className={s.singlePost}>
             <img src={image} />
             <div className={s.content}>
-                Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1Post 1
+                {props.message}
             </div>
             <div className={s.like}>
-                Like!
+                <div className={s.heart} id="heart">
+                </div>
+                <div className={s.hidden} id="hidden">
+                    Нравится! 
+                </div>
+                <div className={s.likesCount}>
+                {props.likesCount}
+                </div>
+                
             </div>
         </div>
     );
