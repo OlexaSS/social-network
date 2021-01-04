@@ -32,95 +32,19 @@ button:active, button:focus {
 button::-moz-focus-inner {
   border: 0;
 }
-/* /////////////////////////// */
 .app-wrapper{
-    max-width: 1920px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
-    display: grid;
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
-    /* grid-gap: 10px; */
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  /* grid-gap: 10px; */
 
-    grid-template-areas: 
-        "h h"
-        "n c"
-    ;
-}
-.header{
-    text-align: center;
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 4px;
-
-    grid-area: h;
-
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 2fr 10fr;
-
-    grid-template-areas: 
-        "lw hd";
-        align-items: center
-        ;
-
-        background-color: #4c77a4;
-}
-.header-description{
-    grid-area: hd;
-}
-.logo-wrapper{
-    grid-area: lw;
-}
-.navbar{
-    padding-top: 30px;
-    grid-area: n;
-    background-color: #395e8a;
-}
-.navbar__list{
-    padding-left: 80px;
-}
-.navbar__list-item{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.navbar__list-item:nth-last-child(1){
-    margin-top: 30px;
-}
-.navbar__list-item a{
-    font-size: 18px;
-    color: #fff;
-    transition: all .3s ease;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-}
-.navbar__list-item a:hover{
-    color: #4c77a4;
-}
-.content{
-    grid-area: c;
-}
-.profile-img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: 100% 50%;
-}
-
-@media (max-width: 1140px){
-    .navbar__list{
-        padding-left: 40px;
-    }
-}
-@media (max-width: 840px){
-    .navbar__list{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+  grid-template-areas: 
+      "h h"
+      "n c"
+  ;
 }

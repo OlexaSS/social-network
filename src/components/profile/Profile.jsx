@@ -1,19 +1,20 @@
 import React from "react";
 import image from '../../assets/images/main-img.jpg';
+import s from "./Profile.module.css";
 
 const Profile = () => {
     return (
-        <div className="content">
-            <div className="img-wrapper">
-                <img className="profile-img" src={image} />
+        <div className={s.content}>
+            <div className={s.wrapper}>
+                <img className={s.img} src={image} alt=""/>
             </div>
-            <div className="content-inner">
-                <div className="content-ava">ava</div>
-                <div className="content-descr">descr</div>
+            <div className={s.content__inner}>
+                <div className={s.content__ava}>ava</div>
+                <div className={s.content__descr}>descr</div>
             </div>
-            <div className="posts">
+            <div className={s.posts}>
                 My posts
-					<div className="new-post">
+					<div className={s.new__post}>
                     new post
 					</div>
                 <div>
