@@ -80,7 +80,6 @@ button::-moz-focus-inner {
     padding-top: 30px;
     grid-area: n;
     background-color: #395e8a;
-    height: 500px;
 }
 .navbar__list{
     padding-left: 80px;
