@@ -7,3 +7,7 @@
     object-fit: cover;
     object-position: 100% 50%;
 }
+.content__inner{
+    padding-left: 100px;
+    padding-top: 15px;
+}

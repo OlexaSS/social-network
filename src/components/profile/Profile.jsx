@@ -1,5 +1,6 @@
 import React from "react";
 import image from '../../assets/images/main-img.jpg';
+import MyPosts from "./myPosts/MyPosts";
 import s from "./Profile.module.css";
 
 const Profile = () => {
@@ -11,18 +12,7 @@ const Profile = () => {
             <div className={s.content__inner}>
                 <div className={s.content__ava}>ava</div>
                 <div className={s.content__descr}>descr</div>
-            </div>
-            <div className={s.posts}>
-                My posts
-					<div className={s.new__post}>
-                    new post
-					</div>
-                <div>
-                    post 1
-					</div>
-                <div>
-                    post 2
-					</div>
+                <MyPosts />
             </div>
         </div>
     );
