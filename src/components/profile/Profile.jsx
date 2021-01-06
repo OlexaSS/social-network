@@ -5,7 +5,7 @@ import s from "./Profile.module.css";
 
 const Profile = () => {
     return (
-        <div className={s.content}>
+        <div>
             <div className={s.wrapper}>
                 <img className={s.img} src={image} alt=""/>
             </div>
