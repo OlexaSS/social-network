@@ -22,9 +22,6 @@
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
 }
-/* .list__item.active a{
-    color: #4c77a4;
-} */
 .list__item a.active{
     color: #4c77a4;
 }

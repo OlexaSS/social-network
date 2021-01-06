@@ -11,7 +11,18 @@
 .item{
     padding: 30px;
 }
-.item.active{
+.item a{
+    color: #1b1313;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.item a.active{
+    color: #4c77a4;
+}
+.item a:hover{
     color: #4c77a4;
 }
 .messages{
