@@ -1,0 +1,40 @@
+.posts{
+    padding-left: 100px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+.post__arhives{
+    padding-top: 30px;
+}
+.post__arhives h3{
+    font-size: 30px;
+}
+.form__btn{
+    padding: 14px;
+    margin-left: 300px;
+    margin-top: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #84a2c1;
+    color: #fff;
+    line-height: 22px;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.form__btn:hover{
+    background-color: #4c77a4;
+}
+textarea{
+    resize: none;
+    border: 1px solid #4c77a4;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+}
+textarea:focus{
+   
+}

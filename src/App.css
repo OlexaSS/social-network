@@ -51,5 +51,5 @@ button::-moz-focus-inner {
 
 .wrapper__content{
   grid-area: c;
-  background-color: #ccc;
+  background-color: #e2eaf3;
 }

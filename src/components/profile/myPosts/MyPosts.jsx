@@ -5,14 +5,16 @@ import Post from "./post/Post";
 const MyPosts = (props) => {
     return (
         <div className={s.posts}>
-            <div>
-                <textarea></textarea>
-                <button>Add post</button>
-
-            </div>
-            <div className={s.posts}>
-                <Post message="First post" likesCount="3333"/>
-                <Post message="Second post" likesCount="0"/>
+            <form>
+                <div>
+                    <textarea rows="10" cols="40"></textarea>
+                </div>
+                <button className={s.form__btn}>Опубликовать</button>
+            </form>
+            <div className={s.post__arhives}>
+                <h3>Опубликованные</h3>
+                <Post message="Первый пост" likesCount="3333" />
+                <Post message="второй пост" likesCount="0" />
             </div>
         </div>
     );
