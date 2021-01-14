@@ -6,6 +6,7 @@ const Navbar = () => {
     return (
         <nav className={s.navbar}>
             <ul className={s.list}>
+                {/* навлинком задаем новый урл для Роута в апп.джс*/}
                 <li className={s.list__item}><NavLink activeClassName={s.active} to="/profile">Профиль</NavLink></li>
                 <li className={s.list__item}><NavLink activeClassName={s.active}  to="/dialogs">Сообщения</NavLink></li>
                 <li className={s.list__item}><NavLink activeClassName={s.active} to="/news">Новости</NavLink></li>
