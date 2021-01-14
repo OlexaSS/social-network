@@ -17,13 +17,18 @@ const App = () => {
 				<Header />
 				<Navbar />
 				<div className="wrapper__content">
-					<Route path='/profile' component={Profile} /> {/*Route следит за урлом.
+					{/* <Route path='/profile' component={Profile} />*/} {/*Route следит за урлом.
 					если он видит совпадение урла, то подгружает соответствующую компоненту
 					*/}
-					<Route path='/dialogs' component={Dialogs} />
+					{/* <Route path='/dialogs' component={Dialogs} /> */}
 					<Route path='/news' component={News} />
 					<Route path='/music' component={Music} />
 					<Route path='/settings' component={Settings} />
+
+					<Route path='/profile' render={ () => <Profile /> } /> {/*Route следит за урлом.
+					если он видит совпадение урла, то подгружает соответствующую компоненту
+					*/}
+					<Route path='/dialogs' render={ () => <Dialogs /> } />
 				</div>
 			</div>
 		</BrowserRouter>
