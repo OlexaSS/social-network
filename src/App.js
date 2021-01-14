@@ -10,7 +10,8 @@ import Music from "./components/music/Music";
 import News from "./components/news/News";
 import Settings from "./components/settings/Settings";
 
-const App = () => {
+const App = (props) => {
+
 	return (
 		<BrowserRouter>
 			<div className="app-wrapper">
@@ -25,10 +26,10 @@ const App = () => {
 					<Route path='/music' component={Music} />
 					<Route path='/settings' component={Settings} />
 
-					<Route path='/profile' render={ () => <Profile /> } /> {/*Route следит за урлом.
+					<Route path='/profile' render={ () => <Profile posts={props.posts}/> } /> {/*Route следит за урлом.
 					если он видит совпадение урла, то подгружает соответствующую компоненту
 					*/}
-					<Route path='/dialogs' render={ () => <Dialogs /> } />
+					<Route path='/dialogs' render={ () => <Dialogs dialogs={props.dialogs} messages={props.messages}/> } />
 				</div>
 			</div>
 		</BrowserRouter>
