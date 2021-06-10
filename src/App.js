@@ -25,7 +25,7 @@ const App = (props) => {
 					<Route path='/profile' render={ () => <Profile state={props.state.profilePage}/> } /> {/*Route следит за урлом.
 					если он видит совпадение урла, то подгружает соответствующую компоненту
 					*/}
-					<Route path='/dialogs' render={ () => <Dialogs state={props.state.messagesPage}/> } />
+					<Route path='/dialogs' render={ () => <Dialogs state={props.state.dialogsPage}/> } />
 				</div>
 			</div>
 		</BrowserRouter>

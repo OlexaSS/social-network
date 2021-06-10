@@ -6,21 +6,21 @@ import Message from "./message/Message";
 const Dialogs = (props) => {
 
     // На основе входящего массива получаем jsx элементы и отрисовываем их
-    let dialogItems = props.state.dialogs.map(
+    let dialogsElemants = props.state.dialogs.map(
         d => <DialogItem name={d.name} id={d.id} />
     );
 
-    let messageItems = props.state.messages.map(
+    let messageElements = props.state.messages.map(
         m => <Message message={m.message} />
     );
 //////////////////////////////////////////////////////////////////////////
     return (
         <div className={s.dialogs}>
             <div className={s.dialogs__items}>
-                {dialogItems}   {/*отрисовываем jsx элементы из нового массива */}
+                {dialogsElemants}   {/*отрисовываем jsx элементы из нового массива */}
             </div>
             <div className={s.messages}>
-                {messageItems}
+                {messageElements}
             </div>
         </div>
     );

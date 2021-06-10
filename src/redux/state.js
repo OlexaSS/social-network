@@ -11,7 +11,7 @@ let state = {
         
     },
 
-    messagesPage: {
+    dialogsPage: {
         messages: [
             { id: 1, message: 'Привет!!!' },
             { id: 2, message: 'Уль ля ля' },
