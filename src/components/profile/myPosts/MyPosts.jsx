@@ -6,21 +6,27 @@ import Post from "./post/Post";
 const MyPosts = (props) => {
     
     
-    let postElement = props.posts.map( 
+    let postElements = props.posts.map( 
             p => <Post message={p.post} likesCount={p.likes} />
         );
 
+    let newPostElement = React.createRef(); //создаем пустую ссылку для тексареи
+    
+
+    let addPost = () =>{
+        let text = newPostElement.current.value;
+        alert(text);
+    }
+
     return (
         <div className={s.posts}>
-            <form>
-                <div>
-                    <textarea rows="10" cols="40"></textarea>
-                </div>
-                <button className={s.form__btn}>Опубликовать</button>
-            </form>
+            <div>
+                <textarea rows="10" cols="40" ref={newPostElement}></textarea> {/*привязываем елемент к пустой ссылке*/}
+            </div>
+            <button className={s.form__btn} onClick={ addPost }>Опубликовать</button>
             <div className={s.post__arhives}>
                 <h3>Опубликованные</h3>
-                {postElement}   {/*отрисовываем jsx элементы из нового массива */}
+                {postElements}   {/*отрисовываем jsx элементы из нового массива */}
             </div>
         </div>
     );

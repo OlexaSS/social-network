@@ -35,8 +35,8 @@ button::-moz-focus-inner {
 .app-wrapper{
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
 
   display: grid;
   grid-template-rows: 60px 1fr;
