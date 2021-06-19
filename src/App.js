@@ -22,7 +22,9 @@ const App = (props) => {
 					<Route path='/music' component={Music} />
 					<Route path='/settings' component={Settings} />
 
-					<Route path='/profile' render={ () => <Profile state={props.state.profilePage}/> } /> {/*Route следит за урлом.
+					<Route path='/profile' render={ () => <Profile 
+					state={props.state.profilePage} 
+					addPost = {props.addPost}/> } /> {/*Route следит за урлом.
 					если он видит совпадение урла, то подгружает соответствующую компоненту
 					*/}
 					<Route path='/dialogs' render={ () => <Dialogs state={props.state.dialogsPage}/> } />

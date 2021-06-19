@@ -6,7 +6,6 @@ let state = {
             {id : 2, post : 'второй пост', likes: 333},
             {id : 3, post : 'второй пост', likes: 10},
             {id : 4, post : 'второй пост', likes: 1},
-            {id : 5, post : 'второй пост', likes: 12}
         ]
         
     },
@@ -28,6 +27,17 @@ let state = {
         ]
     }
     
-  };
+};
+
+export let addPost = (postMessage) => {
+        let newPost = {
+            id: 5,
+            message: postMessage,
+            likes: 0
+        };
+
+        state.profilePage.posts.push(newPost);
+
+    }
 
   export default state;
