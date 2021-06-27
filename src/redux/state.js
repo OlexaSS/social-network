@@ -1,5 +1,6 @@
 import {rerenderEntireTree} from "../render";
 
+
 let state = {
 
     profilePage: {
@@ -8,7 +9,8 @@ let state = {
             {id : 2, post : 'второй пост', likes: 333},
             {id : 3, post : 'второй пост', likes: 10},
             {id : 4, post : 'второй пост', likes: 1},
-        ]
+        ],
+        newPostText: "введите сообщение"
         
     },
 
@@ -30,15 +32,25 @@ let state = {
     }
     
 };
-
-export let addPost = (postMessage) => {
+window.state = state;
+export let addPost = () => {
         let newPost = {
             id: 5,
-            post: postMessage,
+            post: state.profilePage.newPostText,
             likes: 0
         };
 
         state.profilePage.posts.push(newPost);
+        state.profilePage.newPostText = '';
+        rerenderEntireTree(state);
+
+    }
+
+    //отлавливаем каждый символ тексареи
+    export let updateNewPostText = (newText) => {
+
+        state.profilePage.newPostText = newText;
+        //перерисовываем все дерево
         rerenderEntireTree(state);
 
     }
