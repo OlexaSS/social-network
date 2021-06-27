@@ -1,6 +1,6 @@
-import {rerenderEntireTree} from "../render";
-
-
+let rerenderEntireTree = ()=>{
+    console.log('changed');
+}
 let state = {
 
     profilePage: {
@@ -33,7 +33,7 @@ let state = {
     
 };
 window.state = state;
-export let addPost = () => {
+export const addPost = () => {
         let newPost = {
             id: 5,
             post: state.profilePage.newPostText,
@@ -47,12 +47,16 @@ export let addPost = () => {
     }
 
     //отлавливаем каждый символ тексареи
-    export let updateNewPostText = (newText) => {
+    export const updateNewPostText = (newText) => {
 
         state.profilePage.newPostText = newText;
         //перерисовываем все дерево
         rerenderEntireTree(state);
 
+    }
+
+    export const subscribe = (observer)=>{
+        rerenderEntireTree = observer;
     }
 
   export default state;
