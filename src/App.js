@@ -24,8 +24,7 @@ const App = (props) => {
 
 					<Route path='/profile' render={ () => <Profile 
 					profilePage={props.state.profilePage} 
-					addPost = {props.addPost}
-					updateNewPostText = {props.updateNewPostText}
+					dispatch = {props.dispatch}
 					/> } 
 					/> {/*Route следит за урлом.
 					если он видит совпадение урла, то подгружает соответствующую компоненту
